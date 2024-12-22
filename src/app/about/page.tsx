@@ -44,21 +44,12 @@ export default function AboutPage() {
 
               <div className="space-y-6 text-lg leading-relaxed">
                 <p>
-                  Saif is an Iranian-American filmmaker who was born and raised
-                  in the outskirts of Los Angeles. His video collaborations span
-                  some of today's most influential artists, including Nick
-                  Minaj, Lil Wayne, Roddy Ricch, Missy Elliott, J Balvin,
-                  Marshmello, Tyga, Kehlani, and more.
+                  Saif is an Arab-Canadian filmmaker who was born and raised
+                  _____.
                 </p>
 
                 <p>
-                  To date, Saif's projects have accumulated over 2 billion
-                  views online and have been recognized as some of the
-                  most-esteemed videos of the year — with his videos for Latto's
-                  "Big Energy" & Polo G's "Rapstar" being VMA nominated for
-                  "Best Hip-Hop Video" along with Chris Bailey's video "How Does
-                  It Feel" for "Best R&B video," and video for Aitch's rap
-                  anthem "Rain" winning GRM Daily's "Video of the Year."
+                  To date, Saif's projects have ____
                 </p>
 
                 <p>
