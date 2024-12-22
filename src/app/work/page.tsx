@@ -1,27 +1,51 @@
-import { Navigation } from '@/components/navigation'
-import { WorkGrid } from '@/components/workGrid'
+import { PageLayout } from "@/components/pageLayout";
+import { WorkGrid } from "@/components/workGrid";
 
 const projects = [
   {
-    id: 'the-north-face',
-    title: 'The North Face',
-    thumbnail: '/assets/imgs/last-stop-2.jpeg?height=720&width=1280',
-    hoverVideo: '/your-video-url.mp4',
-    category: 'Commercial'
+    id: "1",
+    title: "Buffalo Grass",
+    thumbnail: "/assets/imgs/buffalo-grass.jpeg",
+    hoverVideo: "/assets/vids/demo.mov",
+    category: "Short Film",
+    synopsis: "Add synopsis here",
+    releaseDate: "2024",
+    whereToWatch: "Coming Soon",
   },
-  // Add more projects here
-]
+  {
+    id: "2",
+    title: `Santa's Last Ride`,
+    thumbnail: "/assets/imgs/santa-last-ride-2.jpeg",
+    // hoverVideo: '/assets/vids/demo.mov',
+    category: "Short Film",
+    synopsis: "Add synopsis here",
+    releaseDate: "2024",
+  },
+  {
+    id: "3",
+    title: "Buffalo Grass",
+    thumbnail: "/assets/imgs/buffalo-grass.jpeg",
+    hoverVideo: "/assets/vids/demo.mov",
+    category: "Short Film",
+    synopsis: "Add synopsis here",
+    releaseDate: "2024",
+    whereToWatch: "Coming Soon",
+  },
+  {
+    id: "4",
+    title: `Santa's Last Ride`,
+    thumbnail: "/assets/imgs/santa-last-ride-2.jpeg",
+    hoverVideo: "/assets/vids/demo.mov",
+    category: "Short Film",
+    synopsis: "Add synopsis here",
+    releaseDate: "2024",
+  },
+];
 
 export default function WorkPage() {
   return (
-    <>
-      <Navigation />
-      <div className="min-h-screen bg-black">
-        <div className="max-w-7xl mx-auto px-6 pt-32 pb-16">
-          <WorkGrid projects={projects} />
-        </div>
-      </div>
-    </>
-  )
+    <PageLayout>
+      <WorkGrid projects={projects} />
+    </PageLayout>
+  );
 }
-
