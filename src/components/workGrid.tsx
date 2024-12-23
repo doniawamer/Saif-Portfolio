@@ -14,6 +14,23 @@ export function WorkGrid({ projects }: WorkGridProps) {
   const [selectedProject, setSelectedProject] = useState<ProjectType | null>(
     null
   );
+  const [preloadedVideos, setPreloadedVideos] = useState<{ [key: string]: boolean }>({});
+
+  useEffect(() => {
+    projects.forEach(project => {
+      if (project.hoverVideo) {
+        const video = document.createElement('video');
+        video.src = project.hoverVideo;
+        video.preload = 'auto';
+        video.load();
+        
+        // Mark video as preloaded once it has enough data
+        video.addEventListener('canplaythrough', () => {
+          setPreloadedVideos(prev => ({ ...prev, [project.id]: true }));
+        });
+      }
+    });
+  }, [projects]);
 
   useEffect(() => {
     if (selectedProject) {
@@ -40,7 +57,7 @@ export function WorkGrid({ projects }: WorkGridProps) {
               onMouseLeave={() => setHoveredId(null)}
               onClick={() => setSelectedProject(project)}
             >
-              {hoveredId === project.id && project.hoverVideo ? (
+              {hoveredId === project.id && project.hoverVideo && preloadedVideos[project.id] ? (
                 <video
                   src={project.hoverVideo}
                   autoPlay

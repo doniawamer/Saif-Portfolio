@@ -9,8 +9,7 @@ export default function WorkPage() {
         <div className="text-center space-y-4">
           <h1 className="text-4xl font-bold">Work</h1>
           <p className="text-lg text-white max-w-2xl mx-auto mb-4">
-            Explore a collection of films and creative projects that showcase my
-            storytelling passion.
+            Explore a collection of films and creative projects.
           </p>
         </div>
       </div>
