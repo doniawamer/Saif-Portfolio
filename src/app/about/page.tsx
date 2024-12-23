@@ -20,7 +20,7 @@ export default function AboutPage() {
           <h1 className="text-5xl font-bold tracking-wider">Saif Amer</h1>
 
           <div className="flex gap-8 text-lg">
-            {SOCIAL_LINKS.map((link: any) => (
+            {SOCIAL_LINKS.map((link: { title: string; href: string }) => (
               <Link
                 key={link.title}
                 href={link.href}

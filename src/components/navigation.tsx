@@ -34,7 +34,7 @@ export function Navigation() {
         href="/"
         className="text-xl font-bold tracking-wider text-center sm:text-left mb-2 sm:mb-0"
       >
-        <div className="text-lg">Saif Amer</div>
+        <div className="text-xl uppercase">Saif Amer</div>
         <div className="text-sm font-normal uppercase hidden sm:block">
           Filmmaker
         </div>
