@@ -5,7 +5,7 @@ import './globals.css'
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Saif Amer - Filmmaker',
+  title: 'Saif Amer',
   description: 'Portfolio of works and projects',
 }
 
