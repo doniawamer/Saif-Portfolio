@@ -1,7 +1,7 @@
 "use client";
 
 import { PageLayout } from "@/components/pageLayout";
-import { LINKS, SOCIAL_LINKS } from "@/constants/links";
+import { LINKS, SOCIAL_LINKS } from "@/consts/links";
 import Link from "next/link";
 
 interface SocialLink {
@@ -82,7 +82,7 @@ export default function ContactPage() {
               index !== contactData.length - 1 ? "mb-24" : ""
             }`}
           >
-            <h2 className="text-4xl md:text-6xl font-bold mb-8 tracking-wider">
+            <h2 className="text-2xl md:text-4xl font-bold mb-8 tracking-wider">
               {section.title}
             </h2>
             {renderSectionContent(section)}

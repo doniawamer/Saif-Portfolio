@@ -20,11 +20,12 @@ export function Navigation() {
   }, []);
 
   return (
-    <nav 
+    <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 flex flex-col sm:flex-row items-center justify-between p-6 text-white",
+        "max-w-[2000px] mx-auto",
         "transition-all duration-500 ease-in-out",
-        scrolled 
+        scrolled
           ? "bg-black/85 backdrop-blur-md border-b border-white/10 shadow-lg"
           : "bg-transparent border-b border-transparent shadow-none"
       )}
@@ -43,44 +44,33 @@ export function Navigation() {
           <Link
             href="/"
             className={cn(
-              "hover:opacity-70 transition-all border-b-2 border-transparent",
-              pathname === "/" 
-                ? "font-bold opacity-100 border-white" 
-                : "font-normal opacity-80"
+              "hover:opacity-70 transition-all border-b-2",
+              pathname === "/"
+                ? "font-bold opacity-100 border-white"
+                : "font-normal opacity-80 border-transparent"
             )}
           >
             HOME
           </Link>
         )}
-        <Link
-          href="/about"
-          className={cn(
-            "hover:opacity-70 transition-all border-b-2 border-transparent",
-            pathname === "/about" 
-              ? "font-bold opacity-100 border-white" 
-              : "font-normal opacity-80"
-          )}
-        >
-          ABOUT
-        </Link>
-        <Link
-          href="/work"
-          className={cn(
-            "hover:opacity-70 transition-opacity",
-            pathname === "/work" && "underline"
-          )}
-        >
-          WORK
-        </Link>
-        <Link
-          href="/contact"
-          className={cn(
-            "hover:opacity-70 transition-opacity",
-            pathname === "/contact" && "underline"
-          )}
-        >
-          CONTACT
-        </Link>
+        {[
+          { href: "/about", label: "ABOUT" },
+          { href: "/work", label: "WORK" },
+          { href: "/contact", label: "CONTACT" },
+        ].map(({ href, label }) => (
+          <Link
+            key={href}
+            href={href}
+            className={cn(
+              "hover:opacity-70 transition-all border-b-2",
+              pathname === href
+                ? "font-bold opacity-100 border-white"
+                : "font-normal opacity-80 border-transparent"
+            )}
+          >
+            {label}
+          </Link>
+        ))}
       </div>
     </nav>
   );
