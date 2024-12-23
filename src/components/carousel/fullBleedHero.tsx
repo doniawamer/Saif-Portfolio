@@ -47,6 +47,14 @@ export function FullBleedHero({ src, type }: Slide) {
         />
       )}
       <div className="absolute inset-0 bg-black/20" />
+      <div className="absolute inset-x-0 bottom-[8%] sm:bottom-[15%] md:bottom-[15%] flex flex-col items-center justify-center">
+        <h1 className="text-4xl md:text-6xl font-bold text-white text-center uppercase">
+          Saif Amer
+          <span className="block text-2xl md:text-3xl mt-2 font-light">
+            Filmmaker
+          </span>
+        </h1>
+      </div>
     </div>
   );
 }

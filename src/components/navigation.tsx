@@ -40,7 +40,7 @@ export function Navigation() {
         </div>
       </Link>
       <div className="flex w-full sm:w-auto justify-between sm:gap-8 text-sm">
-        {pathname !== "/" && (
+        {/* {pathname !== "/" && (
           <Link
             href="/"
             className={cn(
@@ -52,7 +52,7 @@ export function Navigation() {
           >
             HOME
           </Link>
-        )}
+        )} */}
         {[
           { href: "/about", label: "ABOUT" },
           { href: "/work", label: "WORK" },
