@@ -28,7 +28,7 @@ export const PROJECTS = [
   {
     id: "2",
     title: "Santa's Last Ride",
-    thumbnail: "/assets/imgs/santa-last-ride.mov",
+    thumbnail: "/assets/imgs/santa-last-ride.jpeg",
     hoverVideo: "/assets/vids/santa-last-ride.mp4",
     category: "Short Film",
     synopsis:
